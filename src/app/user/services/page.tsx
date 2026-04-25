@@ -77,7 +77,9 @@ export default function UserServicesPage() {
                 <div className="dropdown-menu">
                   <Link href="/user/new-order">New Order</Link>
                   <Link href="/user/mass-order">Mass Order</Link>
-                  <Link href="/user/orders">All Orders</Link>
+                  <Link href="/user/all-order">All Order</Link>
+                  <Link href="/user/refill-order">Refill Order</Link>
+                  <Link href="/user/drip-feed">Drip Feed</Link>
                 </div>
               </li>
               <li><Link href="/user/services" className="active">Services</Link></li>
