@@ -57,7 +57,7 @@ export default function DashboardPage() {
       <aside className={`sidebar ${isSidebarOpen ? 'open' : 'closed'}`}>
         <div className="sidebar-header">
           <Link href="/" className="logo">
-            <img src="https://boostsmm.ng/assets/uploads/logo/logo.png" alt="FLASH BOOSTAGE" />
+            <img src="/logo.png" alt="FLASH BOOSTAGE" />
           </Link>
           <button className="sidebar-toggle" onClick={() => setIsSidebarOpen(!isSidebarOpen)}>
             <i className="fas fa-bars"></i>
@@ -384,4 +384,5 @@ export default function DashboardPage() {
     </>
   );
 }
+
 

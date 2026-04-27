@@ -68,7 +68,7 @@ export default function AboutPage() {
             <div className="container custom_nav">
               <Link className="logo" href="/">
                 <img
-                  src="https://boostsmm.ng/assets/uploads/logo/logo.png"
+                  src="/logo.png"
                   alt="FLASH BOOSTAGE Logo"
                   style={{ maxHeight: '40px', width: 'auto' }}
                 />
@@ -351,7 +351,7 @@ export default function AboutPage() {
                   <h5>
                     <Link href="/" className="site_logo">
                       <img
-                        src="https://boostsmm.ng/assets/uploads/logo/logo.png"
+                        src="/logo.png"
                         alt="FLASH BOOSTAGE Logo"
                         style={{ maxWidth: '220px', height: 'auto' }}
                         className="img-fluid"
@@ -452,4 +452,5 @@ export default function AboutPage() {
     </>
   );
 }
+
 
