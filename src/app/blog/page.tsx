@@ -83,7 +83,7 @@ export default function BlogPage() {
               <Link className="logo" href="/">
                 <img
                   src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                  alt="Boost SMM Logo"
+                  alt="FLASH BOOSTAGE Logo"
                   style={{ maxHeight: '40px', width: 'auto' }}
                 />
               </Link>
@@ -260,7 +260,7 @@ export default function BlogPage() {
                     <Link href="/" className="site_logo">
                       <img
                         src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                        alt="Boost SMM Logo"
+                        alt="FLASH BOOSTAGE Logo"
                         style={{ maxWidth: '220px', height: 'auto' }}
                         className="img-fluid"
                       />
@@ -351,7 +351,7 @@ export default function BlogPage() {
           <div className="row">
             <div className="col-sm-12">
               <p className="text-center mb-0">
-                Copyright &copy; {new Date().getFullYear()} Boost SMM. All Rights Reserved
+                Copyright &copy; {new Date().getFullYear()} FLASH BOOSTAGE. All Rights Reserved
               </p>
             </div>
           </div>
@@ -360,3 +360,4 @@ export default function BlogPage() {
     </>
   );
 }
+

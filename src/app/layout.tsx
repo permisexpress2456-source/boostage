@@ -2,20 +2,20 @@ import type { Metadata } from 'next';
 import './globals.css';
 
 export const metadata: Metadata = {
-  title: 'Boost SMM | #1 SMM Panel In The World',
+  title: 'FLASH BOOSTAGE | #1 SMM Panel In The World',
   description:
-    '#1 SMM PANEL IN THE WORLD! Boost SMM is an online social media marketing tool. This software includes almost everything for you need to do a social media marketing business.',
+    '#1 SMM PANEL IN THE WORLD! FLASH BOOSTAGE is an online social media marketing tool. This software includes almost everything for you need to do a social media marketing business.',
   keywords:
-    '#1 SMM PANEL IN THE WORLD!, Boost SMM, best smm panel, cheapest smm panel, facebook, follower, instagram, like, SMM, smm panel, social media marketing, youtube, subscribers',
+    '#1 SMM PANEL IN THE WORLD!, FLASH BOOSTAGE, best smm panel, cheapest smm panel, facebook, follower, instagram, like, SMM, smm panel, social media marketing, youtube, subscribers',
   openGraph: {
-    title: 'Boost SMM | #1 SMM Panel In The World',
-    description: '#1 SMM PANEL IN THE WORLD! Boost SMM is an online social media marketing tool.',
+    title: 'FLASH BOOSTAGE | #1 SMM Panel In The World',
+    description: '#1 SMM PANEL IN THE WORLD! FLASH BOOSTAGE is an online social media marketing tool.',
     images: [
       {
         url: 'https://boostsmm.ng/assets/uploads/logo/meta.png',
         width: 1200,
         height: 630,
-        alt: 'Boost SMM',
+        alt: 'FLASH BOOSTAGE',
       },
     ],
     url: 'https://boostsmm.ng',
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Boost SMM | #1 SMM Panel In The World',
-    description: '#1 SMM PANEL IN THE WORLD! Boost SMM is an online social media marketing tool.',
+    title: 'FLASH BOOSTAGE | #1 SMM Panel In The World',
+    description: '#1 SMM PANEL IN THE WORLD! FLASH BOOSTAGE is an online social media marketing tool.',
   },
   icons: {
     icon: 'https://boostsmm.ng/assets/uploads/logo/favicon.png',
@@ -44,7 +44,7 @@ export default function RootLayout({
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-status-bar-style" content="black" />
-        <meta name="apple-mobile-web-app-title" content="Boost SMM | Home" />
+        <meta name="apple-mobile-web-app-title" content="FLASH BOOSTAGE | Home" />
         <link
           rel="stylesheet"
           href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"

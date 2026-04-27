@@ -42,7 +42,7 @@ export default function LoginPage() {
               <Link className="logo" href="/">
                 <img
                   src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                  alt="Boost SMM Logo"
+                  alt="FLASH BOOSTAGE Logo"
                   style={{ maxHeight: '40px', width: 'auto' }}
                 />
               </Link>
@@ -122,7 +122,7 @@ export default function LoginPage() {
                   <h4>Welcome back!</h4>
                 </div>
                 <p className="mt-30">
-                  Sign in to access your Boost SMM panel and manage your social media marketing campaigns.
+                  Sign in to access your FLASH BOOSTAGE panel and manage your social media marketing campaigns.
                 </p>
               </div>
             </div>
@@ -305,7 +305,7 @@ export default function LoginPage() {
                     <Link href="/" className="site_logo">
                       <img
                         src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                        alt="Boost SMM Logo"
+                        alt="FLASH BOOSTAGE Logo"
                         style={{ maxWidth: '220px', height: 'auto' }}
                         className="img-fluid"
                       />
@@ -314,7 +314,7 @@ export default function LoginPage() {
                   <p>
                     All user data is maintained with absolute confidentiality and will not be
                     disclosed to any third party. Rest assured, your security is our top priority
-                    at Boost SMM - Your most reliable partner.
+                    at FLASH BOOSTAGE - Your most reliable partner.
                   </p>
                 </div>
                 <div className="social_area mt-50">
@@ -390,7 +390,7 @@ export default function LoginPage() {
         <div className="container">
           <div className="row">
             <div className="col-sm-12">
-              <p>Copyright &copy; {new Date().getFullYear()} Boost SMM. All Rights Reserved</p>
+              <p>Copyright &copy; {new Date().getFullYear()} FLASH BOOSTAGE. All Rights Reserved</p>
             </div>
           </div>
         </div>
@@ -398,3 +398,4 @@ export default function LoginPage() {
     </>
   );
 }
+

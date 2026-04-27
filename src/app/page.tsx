@@ -26,7 +26,7 @@ export default function HomePage() {
               <Link className="logo" href="/">
                 <img
                   src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                  alt="Boost SMM Logo"
+                  alt="FLASH BOOSTAGE Logo"
                   style={{ maxHeight: '40px', width: 'auto' }}
                 />
               </Link>
@@ -81,7 +81,7 @@ export default function HomePage() {
               <div className="hero-text-area">
                 <h1>#1 SMM Panel In The World</h1>
                 <p>
-                  Boost SMM is an online social media marketing tool. This software includes 
+                  FLASH BOOSTAGE is an online social media marketing tool. This software includes 
                   almost everything you need to do a social media marketing business. It has 
                   services lined up for every social media platform.
                 </p>
@@ -197,7 +197,7 @@ export default function HomePage() {
               <div className="image-area position-relative">
                 <img
                   src="https://boostsmm.ng/assets/themes/lightorange/img/about.png"
-                  alt="About Boost SMM"
+                  alt="About FLASH BOOSTAGE"
                   className="img-fluid"
                   style={{ borderRadius: '12px' }}
                 />
@@ -212,7 +212,7 @@ export default function HomePage() {
                   <h6 className="section-subtitle">About Us</h6>
                   <h2>We Are The Best SMM Panel</h2>
                   <p>
-                    Boost SMM is the #1 SMM panel in the world. We provide the best services 
+                    FLASH BOOSTAGE is the #1 SMM panel in the world. We provide the best services 
                     for all major social media platforms including Facebook, Instagram, YouTube, 
                     Twitter, TikTok, and more.
                   </p>
@@ -448,7 +448,7 @@ export default function HomePage() {
                     <i className="fas fa-quote-left fa-2x" style={{ color: '#fe5268', opacity: 0.3 }}></i>
                   </div>
                   <p>
-                    "Amazing prices and quality! I've been using Boost SMM for 6 months and my 
+                    "Amazing prices and quality! I've been using FLASH BOOSTAGE for 6 months and my 
                     Instagram has grown from 0 to 50K followers. Thank you!"
                   </p>
                   <div className="cmn-icon mt-4">
@@ -471,7 +471,7 @@ export default function HomePage() {
                   </div>
                   <p>
                     "The API integration is seamless. As a reseller, this platform has helped me 
-                    scale my business. Great work Boost SMM team!"
+                    scale my business. Great work FLASH BOOSTAGE team!"
                   </p>
                   <div className="cmn-icon mt-4">
                     <img
@@ -668,7 +668,7 @@ export default function HomePage() {
                     <Link href="/" className="site_logo">
                       <img
                         src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                        alt="Boost SMM Logo"
+                        alt="FLASH BOOSTAGE Logo"
                         style={{ maxWidth: '220px', height: 'auto' }}
                         className="img-fluid"
                       />
@@ -760,7 +760,7 @@ export default function HomePage() {
           <div className="row">
             <div className="col-sm-12">
               <p className="text-center mb-0">
-                Copyright &copy; {new Date().getFullYear()} Boost SMM. All Rights Reserved
+                Copyright &copy; {new Date().getFullYear()} FLASH BOOSTAGE. All Rights Reserved
               </p>
             </div>
           </div>
@@ -769,3 +769,4 @@ export default function HomePage() {
     </>
   );
 }
+

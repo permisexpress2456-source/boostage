@@ -29,7 +29,7 @@ export default function RefillOrderPage() {
         <div className="container">
           <div className="nav-content">
             <Link href="/dashboard" className="logo">
-              <img src="https://boostsmm.ng/assets/uploads/logo/logo.png" alt="Boost SMM" />
+              <img src="https://boostsmm.ng/assets/uploads/logo/logo.png" alt="FLASH BOOSTAGE" />
             </Link>
             <ul className="nav-links">
               <li><Link href="/dashboard">Dashboard</Link></li>
@@ -196,3 +196,4 @@ export default function RefillOrderPage() {
     </div>
   );
 }
+

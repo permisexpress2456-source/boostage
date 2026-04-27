@@ -51,7 +51,7 @@ To be sure that you got the correct link, paste it in your browser's address bar
   },
   {
     id: 4,
-    question: 'Is it safe to use Boost SMM?',
+    question: 'Is it safe to use FLASH BOOSTAGE?',
     answer: "Yes it's safe, no bans or block on your account for using our services.",
   },
   {
@@ -114,7 +114,7 @@ export default function FAQPage() {
               <Link className="logo" href="/">
                 <img
                   src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                  alt="Boost SMM Logo"
+                  alt="FLASH BOOSTAGE Logo"
                   style={{ maxHeight: '40px', width: 'auto' }}
                 />
               </Link>
@@ -189,7 +189,7 @@ export default function FAQPage() {
             <div className="section_header text-center text-sm-start">
               <h2>Frequently Asked Questions</h2>
               <p className="para_text">
-                Boost SMM gives you the best marketing tool so you can topple the Competition.
+                FLASH BOOSTAGE gives you the best marketing tool so you can topple the Competition.
               </p>
             </div>
           </div>
@@ -277,7 +277,7 @@ export default function FAQPage() {
                     <Link href="/" className="site_logo">
                       <img
                         src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                        alt="Boost SMM Logo"
+                        alt="FLASH BOOSTAGE Logo"
                         style={{ maxWidth: '220px', height: 'auto' }}
                         className="img-fluid"
                       />
@@ -368,7 +368,7 @@ export default function FAQPage() {
           <div className="row">
             <div className="col-sm-12">
               <p className="text-center mb-0">
-                Copyright &copy; {new Date().getFullYear()} Boost SMM. All Rights Reserved
+                Copyright &copy; {new Date().getFullYear()} FLASH BOOSTAGE. All Rights Reserved
               </p>
             </div>
           </div>
@@ -377,3 +377,4 @@ export default function FAQPage() {
     </>
   );
 }
+

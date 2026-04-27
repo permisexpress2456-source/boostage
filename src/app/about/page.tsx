@@ -24,28 +24,28 @@ const testimonials: Testimonial[] = [
     name: 'Alex K',
     role: 'Small Business Owner',
     image: 'https://boostsmm.ng/assets/uploads/content/6565d10e397ba1701171470.png',
-    content: "I've been running a small boutique for years, and Boost SMM has truly transformed the way I approach social media. Their team took the time to understand my brand, and the results have been phenomenal. From curated content that perfectly aligns with my brand to targeted ad campaigns that drove traffic to my online store, Boost SMM's expertise is unmatched.",
+    content: "I've been running a small boutique for years, and FLASH BOOSTAGE has truly transformed the way I approach social media. Their team took the time to understand my brand, and the results have been phenomenal. From curated content that perfectly aligns with my brand to targeted ad campaigns that drove traffic to my online store, FLASH BOOSTAGE's expertise is unmatched.",
   },
   {
     id: 2,
     name: 'Bose M.',
     role: 'Marketing Manager',
     image: 'https://boostsmm.ng/assets/uploads/content/6565d106bceee1701171462.png',
-    content: "As a marketing manager overseeing multiple projects, integrating social media seamlessly into our strategy was a challenge. Enter Boost SMM. Their tailored solutions and strategic approach have been a game-changer for us. From managing our accounts to providing detailed analytics, Boost SMM has become an indispensable part of our marketing toolkit.",
+    content: "As a marketing manager overseeing multiple projects, integrating social media seamlessly into our strategy was a challenge. Enter FLASH BOOSTAGE. Their tailored solutions and strategic approach have been a game-changer for us. From managing our accounts to providing detailed analytics, FLASH BOOSTAGE has become an indispensable part of our marketing toolkit.",
   },
   {
     id: 3,
     name: 'Sola B.',
     role: 'E-commerce Entrepreneur',
     image: 'https://boostsmm.ng/assets/uploads/content/6565d0fd398441701171453.png',
-    content: "In the competitive world of e-commerce, standing out on social media is non-negotiable. Boost SMM not only helped us stand out but propelled our brand into the spotlight. From running targeted ad campaigns that converted leads into customers to managing our social media calendar flawlessly, their services have been pivotal to our success.",
+    content: "In the competitive world of e-commerce, standing out on social media is non-negotiable. FLASH BOOSTAGE not only helped us stand out but propelled our brand into the spotlight. From running targeted ad campaigns that converted leads into customers to managing our social media calendar flawlessly, their services have been pivotal to our success.",
   },
   {
     id: 4,
     name: 'Emeka R.',
     role: 'Influencer and Content Creator',
     image: 'https://boostsmm.ng/assets/uploads/content/6565d0f144d6f1701171441.png',
-    content: "Being an influencer, maintaining an authentic and engaging social media presence is key. Boost SMM understands this better than anyone. Their content creation team not only brings my vision to life but adds that extra spark that keeps my audience hooked. The growth in my followers and engagement is a testament to their expertise.",
+    content: "Being an influencer, maintaining an authentic and engaging social media presence is key. FLASH BOOSTAGE understands this better than anyone. Their content creation team not only brings my vision to life but adds that extra spark that keeps my audience hooked. The growth in my followers and engagement is a testament to their expertise.",
   },
 ];
 
@@ -69,7 +69,7 @@ export default function AboutPage() {
               <Link className="logo" href="/">
                 <img
                   src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                  alt="Boost SMM Logo"
+                  alt="FLASH BOOSTAGE Logo"
                   style={{ maxHeight: '40px', width: 'auto' }}
                 />
               </Link>
@@ -156,7 +156,7 @@ export default function AboutPage() {
                   <i className="fas fa-headset fa-3x" style={{ color: '#fe5268' }}></i>
                 </div>
                 <h5 className="pt-30 mb-20">Customer Support</h5>
-                <p>Boost SMM comes with a dedicated team to drive a world-class customer's support. we will Add Daily new service offer and improving support system for fast support</p>
+                <p>FLASH BOOSTAGE comes with a dedicated team to drive a world-class customer's support. we will Add Daily new service offer and improving support system for fast support</p>
               </div>
             </div>
             <div className="col-lg-4 col-md-6 mb-5">
@@ -165,7 +165,7 @@ export default function AboutPage() {
                   <i className="fas fa-credit-card fa-3x" style={{ color: '#fe5268' }}></i>
                 </div>
                 <h5 className="pt-30 mb-20">Automatic Payments</h5>
-                <p>Most SMM Panels make you input payment information every time you make an order. Set up an automatic payment method with Boost SMM.</p>
+                <p>Most SMM Panels make you input payment information every time you make an order. Set up an automatic payment method with FLASH BOOSTAGE.</p>
               </div>
             </div>
           </div>
@@ -181,7 +181,7 @@ export default function AboutPage() {
                 <img
                   className="animation1"
                   src="https://boostsmm.ng/assets/uploads/content/631432858fec31662268037.png"
-                  alt="About Boost SMM"
+                  alt="About FLASH BOOSTAGE"
                   style={{ maxWidth: '100%', height: 'auto' }}
                 />
                 <div className="video_play_btn">
@@ -196,7 +196,7 @@ export default function AboutPage() {
                   <h2>WHO WE ARE.</h2>
                   <p>We help to grow your SMM business.</p>
                   <p>
-                    Boost SMM is one of the renowned SMM reseller Panels existing on the internet.
+                    FLASH BOOSTAGE is one of the renowned SMM reseller Panels existing on the internet.
                     We have been providing services for 5+ years and provide services for almost every kind of Social Media.
                     Our Social Media Marketing Services include SMM for Facebook, Instagram, Twitter, Youtube, Tiktok, LinkedIn, Shazam, and many more.
                   </p>
@@ -256,7 +256,7 @@ export default function AboutPage() {
               <div className="section_subtitle">Testimonial</div>
               <h2>What Clients Say</h2>
               <p className="para_text m-auto">
-                Boost SMM: Transforming Lives and Businesses Through Social Media Excellence
+                FLASH BOOSTAGE: Transforming Lives and Businesses Through Social Media Excellence
               </p>
             </div>
           </div>
@@ -352,7 +352,7 @@ export default function AboutPage() {
                     <Link href="/" className="site_logo">
                       <img
                         src="https://boostsmm.ng/assets/uploads/logo/logo.png"
-                        alt="Boost SMM Logo"
+                        alt="FLASH BOOSTAGE Logo"
                         style={{ maxWidth: '220px', height: 'auto' }}
                         className="img-fluid"
                       />
@@ -443,7 +443,7 @@ export default function AboutPage() {
           <div className="row">
             <div className="col-sm-12">
               <p className="text-center mb-0">
-                Copyright &copy; {new Date().getFullYear()} Boost SMM. All Rights Reserved
+                Copyright &copy; {new Date().getFullYear()} FLASH BOOSTAGE. All Rights Reserved
               </p>
             </div>
           </div>
@@ -452,3 +452,4 @@ export default function AboutPage() {
     </>
   );
 }
+
