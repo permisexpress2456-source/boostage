@@ -2,6 +2,8 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
 
 interface Service {
   id: number;
@@ -230,7 +232,7 @@ export default function ServicesPage() {
                         </td>
                         <td data-label="Min - Max">
                           <span className="min_max">
-                            {service.min} - {service.max.toLocaleString()}
+                            {service.min} - {service.max.toLocaleString('en-US')}
                           </span>
                         </td>
                         <td data-label="Description">

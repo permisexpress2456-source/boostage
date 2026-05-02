@@ -235,7 +235,7 @@ export default function AboutPage() {
                       </div>
                       <div className="text_area">
                         <h4>
-                          <span className="achivement_counter">{stat.value.toLocaleString()}</span> +
+                          <span className="achivement_counter">{stat.value.toLocaleString('en-US')}</span> +
                         </h4>
                         <h5>{stat.label}</h5>
                       </div>

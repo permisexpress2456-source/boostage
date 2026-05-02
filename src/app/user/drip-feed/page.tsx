@@ -203,7 +203,7 @@ export default function DripFeedPage() {
                     <h4>Order Summary</h4>
                     <div className="summary-item">
                       <span>Total Quantity:</span>
-                      <span className="value">{quantityPerRun && runs ? (parseInt(quantityPerRun) * parseInt(runs)).toLocaleString() : '0'}</span>
+                      <span className="value">{quantityPerRun && runs ? (parseInt(quantityPerRun) * parseInt(runs)).toLocaleString('en-US') : '0'}</span>
                     </div>
                     <div className="summary-item">
                       <span>Total Duration:</span>

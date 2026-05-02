@@ -282,7 +282,7 @@ export default function DashboardPage() {
                                 {order.link.substring(0, 30)}...
                               </a>
                             </td>
-                            <td>{order.quantity.toLocaleString()}</td>
+                            <td>{order.quantity.toLocaleString('en-US')}</td>
                             <td>
                               <span className={`status-badge ${order.status.toLowerCase().replace(' ', '-')}`}>
                                 {order.status}

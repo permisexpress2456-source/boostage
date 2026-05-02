@@ -139,7 +139,7 @@ export default function AllOrderPage() {
                           {order.link.substring(0, 35)}...
                         </a>
                       </td>
-                      <td>{order.quantity.toLocaleString()}</td>
+                      <td>{order.quantity.toLocaleString('en-US')}</td>
                       <td className="charge">${order.charge.toFixed(2)}</td>
                       <td>
                         <span className={`status-badge ${order.status.toLowerCase().replace(' ', '-')}`}>

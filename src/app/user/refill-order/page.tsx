@@ -110,10 +110,10 @@ export default function RefillOrderPage() {
                           {order.link.substring(0, 35)}...
                         </a>
                       </td>
-                      <td>{order.quantity.toLocaleString()}</td>
+                      <td>{order.quantity.toLocaleString('en-US')}</td>
                       <td>
                         <div className="remaining-bar">
-                          <span>{order.remaining.toLocaleString()}</span>
+                          <span>{order.remaining.toLocaleString('en-US')}</span>
                           <div className="bar">
                             <div 
                               className="fill" 
@@ -164,11 +164,11 @@ export default function RefillOrderPage() {
                   </div>
                   <div className="form-group">
                     <label>Original Quantity</label>
-                    <div className="form-display">{selectedOrder.quantity.toLocaleString()}</div>
+                    <div className="form-display">{selectedOrder.quantity.toLocaleString('en-US')}</div>
                   </div>
                   <div className="form-group">
                     <label>Current Count</label>
-                    <div className="form-display">{selectedOrder.remaining.toLocaleString()}</div>
+                    <div className="form-display">{selectedOrder.remaining.toLocaleString('en-US')}</div>
                   </div>
                   <div className="form-group">
                     <label>Refill Quantity</label>

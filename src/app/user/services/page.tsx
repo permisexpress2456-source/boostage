@@ -153,11 +153,11 @@ export default function UserServicesPage() {
                   </div>
                   <div className="service-detail">
                     <span className="label">Min:</span>
-                    <span className="value">{service.min.toLocaleString()}</span>
+                    <span className="value">{service.min.toLocaleString('en-US')}</span>
                   </div>
                   <div className="service-detail">
                     <span className="label">Max:</span>
-                    <span className="value">{service.max.toLocaleString()}</span>
+                    <span className="value">{service.max.toLocaleString('en-US')}</span>
                   </div>
                   <p className="service-description">{service.description}</p>
                 </div>

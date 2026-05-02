@@ -1,7 +1,11 @@
+'use client';
+
 import Link from 'next/link';
+import { useState, useEffect } from 'react';
 
 export default function Footer() {
-  const currentYear = new Date().getFullYear();
+  const [currentYear, setCurrentYear] = useState(2025);
+  useEffect(() => { setCurrentYear(new Date().getFullYear()); }, []);
 
   return (
     <footer className="footer-area">
