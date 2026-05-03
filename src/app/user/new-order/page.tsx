@@ -1,7 +1,6 @@
 'use client';
 
 import { useState } from 'react';
-import Link from 'next/link';
 
 interface Service {
   id: number;
@@ -41,168 +40,254 @@ export default function NewOrderPage() {
   };
 
   return (
-    <div className="user-services-page">
-      <nav className="user-nav">
-        <div className="container">
-          <div className="nav-content">
-            <Link href="/dashboard" className="logo">
-              <img src="/logo.png" alt="FLASH BOOSTAGE" />
-            </Link>
-            <ul className="nav-links">
-              <li><Link href="/dashboard">Dashboard</Link></li>
-              <li className="dropdown">
-                <span>Order <i className="fas fa-chevron-down"></i></span>
-                <div className="dropdown-menu">
-                  <Link href="/user/new-order" className="active">New Order</Link>
-                  <Link href="/user/mass-order">Mass Order</Link>
-                  <Link href="/user/all-order">All Order</Link>
-                  <Link href="/user/refill-order">Refill Order</Link>
-                  <Link href="/user/drip-feed">Drip Feed</Link>
-                </div>
-              </li>
-              <li><Link href="/user/services">Services</Link></li>
-              <li><Link href="/user/add-funds">Add Funds</Link></li>
-              <li><Link href="/user/transactions">Transactions</Link></li>
-              <li><Link href="/user/api">API</Link></li>
-              <li><a href="https://wa.me/2348131654957" target="_blank">Support</a></li>
-            </ul>
-            <div className="user-menu">
-              <div className="balance-display">
-                <i className="fas fa-wallet"></i>
-                <span>$1,250.50</span>
+    <>
+      <style>{`
+        /* ── layout ── */
+        .no-layout {
+          display: grid;
+          grid-template-columns: 1fr 380px;
+          gap: 24px;
+          align-items: flex-start;
+        }
+
+        /* ── search / filter bar ── */
+        .no-search-bar {
+          display: grid;
+          grid-template-columns: 1fr 200px;
+          gap: 12px;
+          margin-bottom: 16px;
+        }
+        .no-input-wrap { position: relative; }
+        .no-input-wrap i {
+          position: absolute; left: 13px; top: 50%; transform: translateY(-50%);
+          color: #94a3b8; font-size: .85rem; pointer-events: none;
+        }
+        .no-input-wrap input,
+        .no-input-wrap select {
+          width: 100%; background: #0a0f1e; border: 1px solid rgba(255,255,255,.07);
+          border-radius: 10px; color: #e2e8f0; padding: 11px 14px 11px 38px;
+          font-size: .875rem; font-family: inherit; transition: border-color .2s;
+          appearance: none; -webkit-appearance: none;
+        }
+        .no-input-wrap input:focus,
+        .no-input-wrap select:focus {
+          outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,.15);
+        }
+
+        /* ── services list card ── */
+        .no-services-card {
+          background: #0d1726; border: 1px solid rgba(255,255,255,.07);
+          border-radius: 16px; overflow: hidden;
+        }
+        .no-card-head {
+          padding: 18px 20px; border-bottom: 1px solid rgba(255,255,255,.07);
+          background: linear-gradient(90deg, rgba(37,99,235,.1), rgba(249,115,22,.06));
+        }
+        .no-card-head h2 { font-size: 1rem; font-weight: 700; color: #f1f5f9; margin: 0 0 3px; }
+        .no-card-head p { font-size: .78rem; color: #94a3b8; margin: 0; }
+
+        .no-service-item {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 14px 20px; border-bottom: 1px solid rgba(255,255,255,.05);
+          cursor: pointer; transition: background .15s;
+        }
+        .no-service-item:last-child { border-bottom: none; }
+        .no-service-item:hover { background: rgba(37,99,235,.06); }
+        .no-service-item.selected { background: rgba(37,99,235,.12); border-left: 3px solid #2563eb; }
+        .no-service-name { font-size: .84rem; font-weight: 600; color: #f1f5f9; margin-bottom: 4px; }
+        .no-cat-tag {
+          display: inline-flex; align-items: center;
+          background: rgba(249,115,22,.1); border: 1px solid rgba(249,115,22,.2);
+          color: #f97316; font-size: .68rem; font-weight: 700;
+          padding: 2px 8px; border-radius: 4px; text-transform: uppercase; letter-spacing: .4px;
+        }
+        .no-service-meta { text-align: right; }
+        .no-rate {
+          display: inline-block; padding: 4px 10px; border-radius: 7px;
+          background: linear-gradient(135deg, rgba(37,99,235,.18), rgba(249,115,22,.18));
+          border: 1px solid rgba(249,115,22,.22); color: #f97316;
+          font-size: .78rem; font-weight: 700; white-space: nowrap; margin-bottom: 4px;
+        }
+        .no-range { font-size: .72rem; color: #94a3b8; white-space: nowrap; }
+
+        /* ── order panel card ── */
+        .no-panel-card {
+          background: #0d1726; border: 1px solid rgba(249,115,22,.22);
+          border-radius: 16px; overflow: hidden; position: sticky; top: 24px;
+          box-shadow: 0 20px 60px rgba(0,0,0,.4);
+        }
+        .no-panel-head {
+          padding: 16px 20px; border-bottom: 1px solid rgba(255,255,255,.07);
+          background: linear-gradient(90deg, rgba(37,99,235,.12), rgba(249,115,22,.08));
+        }
+        .no-panel-head h3 { font-size: .95rem; font-weight: 700; color: #f1f5f9; margin: 0; }
+        .no-panel-body { padding: 20px; display: flex; flex-direction: column; gap: 16px; }
+
+        .no-empty-state { text-align: center; padding: 40px 20px; color: #94a3b8; }
+        .no-empty-state i { font-size: 2rem; opacity: .25; display: block; margin-bottom: 12px; }
+        .no-empty-state p { font-size: .84rem; }
+
+        .no-form-group { display: flex; flex-direction: column; gap: 6px; }
+        .no-form-group label { font-size: .7rem; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: .5px; }
+        .no-form-display {
+          background: #0a0f1e; border: 1px solid rgba(255,255,255,.07); border-radius: 8px;
+          padding: 10px 14px; font-size: .84rem; font-weight: 600; color: #f1f5f9;
+        }
+        .no-service-details {
+          display: flex; gap: 10px; flex-wrap: wrap; margin-top: 6px;
+        }
+        .no-service-details span { font-size: .72rem; color: #94a3b8; }
+        .no-form-group input {
+          background: #0a0f1e; border: 1px solid rgba(255,255,255,.07); border-radius: 8px;
+          color: #e2e8f0; padding: 10px 14px; font-size: .875rem; font-family: inherit;
+          transition: border-color .2s;
+        }
+        .no-form-group input:focus { outline: none; border-color: #2563eb; box-shadow: 0 0 0 3px rgba(37,99,235,.15); }
+
+        .no-total-box {
+          display: flex; align-items: center; justify-content: space-between;
+          padding: 14px 16px; border: 2px solid rgba(249,115,22,.25); border-radius: 10px;
+          background: rgba(249,115,22,.05);
+        }
+        .no-total-label { font-size: .72rem; color: #94a3b8; font-weight: 600; text-transform: uppercase; }
+        .no-total-amount { font-size: 1.3rem; font-weight: 800; color: #f97316; }
+
+        .no-submit-btn {
+          display: flex; align-items: center; justify-content: center; gap: 8px;
+          padding: 13px 24px; background: linear-gradient(135deg, #2563eb, #f97316);
+          color: #fff; border: none; border-radius: 10px; font-size: .9rem; font-weight: 700;
+          cursor: pointer; font-family: inherit; width: 100%;
+          transition: opacity .2s, transform .2s, box-shadow .2s;
+        }
+        .no-submit-btn:hover { opacity: .9; transform: translateY(-1px); box-shadow: 0 8px 24px rgba(37,99,235,.35); }
+
+        @media (max-width: 900px) {
+          .no-layout { grid-template-columns: 1fr; }
+          .no-panel-card { position: static; }
+          .no-search-bar { grid-template-columns: 1fr; }
+        }
+      `}</style>
+
+      <div className="no-layout">
+        {/* Left — service picker */}
+        <div className="no-services-card">
+          <div className="no-card-head">
+            <h2>New Order</h2>
+            <p>Fill in the details below to place your order</p>
+          </div>
+
+          <div style={{ padding: '16px 20px', borderBottom: '1px solid rgba(255,255,255,.05)' }}>
+            <div className="no-search-bar">
+              <div className="no-input-wrap">
+                <i className="fas fa-search"></i>
+                <input
+                  type="text"
+                  placeholder="Search for services..."
+                  value={searchTerm}
+                  onChange={(e) => setSearchTerm(e.target.value)}
+                />
               </div>
-              <div className="avatar">
-                <i className="fas fa-user"></i>
+              <div className="no-input-wrap">
+                <i className="fas fa-layer-group"></i>
+                <select
+                  value={selectedCategory}
+                  onChange={(e) => setSelectedCategory(e.target.value)}
+                >
+                  {categories.map(cat => (
+                    <option key={cat} value={cat}>{cat}</option>
+                  ))}
+                </select>
               </div>
             </div>
           </div>
-        </div>
-      </nav>
 
-      <main className="user-services-content">
-        <div className="container">
-          <div className="breadcrumb">
-            <Link href="/dashboard">Home</Link>
-            <span className="separator">/</span>
-            <Link href="/user/services">Order</Link>
-            <span className="separator">/</span>
-            <span className="active">New Order</span>
-          </div>
-
-          <div className="new-order-layout">
-            <div className="order-form-section">
-              <div className="section-header">
-                <h2>New Order</h2>
-                <p>Fill in the details below to place your order</p>
+          <div>
+            {filteredServices.map(service => (
+              <div
+                key={service.id}
+                className={`no-service-item${selectedService?.id === service.id ? ' selected' : ''}`}
+                onClick={() => setSelectedService(service)}
+              >
+                <div>
+                  <div className="no-service-name">{service.name}</div>
+                  <span className="no-cat-tag">{service.category}</span>
+                </div>
+                <div className="no-service-meta">
+                  <div className="no-rate">${service.rate.toFixed(2)}/1K</div>
+                  <div className="no-range">Min: {service.min.toLocaleString('en-US')} · Max: {service.max.toLocaleString('en-US')}</div>
+                </div>
               </div>
+            ))}
+            {filteredServices.length === 0 && (
+              <div className="no-empty-state">
+                <i className="fas fa-search-minus"></i>
+                <p>No services match your search.</p>
+              </div>
+            )}
+          </div>
+        </div>
 
-              <div className="search-filter-bar">
-                <div className="search-box">
-                  <i className="fas fa-search"></i>
+        {/* Right — order panel */}
+        <div className="no-panel-card">
+          <div className="no-panel-head">
+            <h3><i className="fas fa-shopping-cart" style={{ color: '#f97316', marginRight: 8 }}></i>Place Order</h3>
+          </div>
+          <div className="no-panel-body">
+            {!selectedService ? (
+              <div className="no-empty-state">
+                <i className="fas fa-hand-pointer"></i>
+                <p>Select a service from the list to continue</p>
+              </div>
+            ) : (
+              <>
+                <div className="no-form-group">
+                  <label>Category</label>
+                  <div className="no-form-display">{selectedService.category}</div>
+                </div>
+                <div className="no-form-group">
+                  <label>Service</label>
+                  <div className="no-form-display">{selectedService.name}</div>
+                  <div className="no-service-details">
+                    <span>Rate: ${selectedService.rate.toFixed(2)}/1K</span>
+                    <span>Min: {selectedService.min} | Max: {selectedService.max}</span>
+                  </div>
+                </div>
+                <div className="no-form-group">
+                  <label>Link</label>
                   <input
-                    type="text"
-                    placeholder="Search for services..."
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
+                    type="url"
+                    placeholder="https://instagram.com/username or post link"
+                    value={orderLink}
+                    onChange={(e) => setOrderLink(e.target.value)}
                   />
                 </div>
-                <div className="category-filter">
-                  <select
-                    value={selectedCategory}
-                    onChange={(e) => setSelectedCategory(e.target.value)}
-                  >
-                    {categories.map(cat => (
-                      <option key={cat} value={cat}>{cat}</option>
-                    ))}
-                  </select>
+                <div className="no-form-group">
+                  <label>Quantity</label>
+                  <input
+                    type="number"
+                    placeholder={`Min: ${selectedService.min} – Max: ${selectedService.max}`}
+                    value={orderQuantity}
+                    onChange={(e) => setOrderQuantity(e.target.value)}
+                    min={selectedService.min}
+                    max={selectedService.max}
+                  />
                 </div>
-              </div>
-
-              <div className="services-list">
-                {filteredServices.map(service => (
-                  <div
-                    key={service.id}
-                    className={`service-item ${selectedService?.id === service.id ? 'selected' : ''}`}
-                    onClick={() => setSelectedService(service)}
-                  >
-                    <div className="service-info">
-                      <h4>{service.name}</h4>
-                      <span className="category-tag">{service.category}</span>
-                    </div>
-                    <div className="service-meta">
-                      <span className="rate">${service.rate.toFixed(2)}/1K</span>
-                      <span className="range">Min: {service.min} - Max: {service.max}</span>
-                    </div>
+                <div className="no-form-group">
+                  <label>Total Charge</label>
+                  <div className="no-total-box">
+                    <span className="no-total-label">Amount to pay</span>
+                    <span className="no-total-amount">${calculateTotal().toFixed(4)}</span>
                   </div>
-                ))}
-              </div>
-            </div>
-
-            <div className="order-panel">
-              <div className="order-panel-header">
-                <h3>Place Order</h3>
-              </div>
-              <div className="order-panel-body">
-                {!selectedService ? (
-                  <div className="no-service-selected">
-                    <i className="fas fa-shopping-cart"></i>
-                    <p>Select a service to continue</p>
-                  </div>
-                ) : (
-                  <>
-                    <div className="form-group">
-                      <label>Category</label>
-                      <div className="form-display">{selectedService.category}</div>
-                    </div>
-                    <div className="form-group">
-                      <label>Service</label>
-                      <div className="form-display">{selectedService.name}</div>
-                      <div className="service-details">
-                        <span>Rate: ${selectedService.rate.toFixed(2)}/1K</span>
-                        <span>Min: {selectedService.min} | Max: {selectedService.max}</span>
-                      </div>
-                    </div>
-                    <div className="form-group">
-                      <label>Link</label>
-                      <input
-                        type="url"
-                        className="form-control"
-                        placeholder="https://instagram.com/username or post link"
-                        value={orderLink}
-                        onChange={(e) => setOrderLink(e.target.value)}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Quantity</label>
-                      <input
-                        type="number"
-                        className="form-control"
-                        placeholder={`Min: ${selectedService.min} - Max: ${selectedService.max}`}
-                        value={orderQuantity}
-                        onChange={(e) => setOrderQuantity(e.target.value)}
-                        min={selectedService.min}
-                        max={selectedService.max}
-                      />
-                    </div>
-                    <div className="form-group">
-                      <label>Total Charge</label>
-                      <div className="total-display">
-                        <span className="amount">${calculateTotal().toFixed(2)}</span>
-                      </div>
-                    </div>
-                    <button className="submit-order-btn">
-                      <i className="fas fa-shopping-cart"></i>
-                      Submit Order
-                    </button>
-                  </>
-                )}
-              </div>
-            </div>
+                </div>
+                <button className="no-submit-btn">
+                  <i className="fas fa-shopping-cart"></i>
+                  Submit Order
+                </button>
+              </>
+            )}
           </div>
         </div>
-      </main>
-    </div>
+      </div>
+    </>
   );
 }
-
-

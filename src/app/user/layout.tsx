@@ -6,25 +6,27 @@ import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 
 const NAV = [
-  { icon: 'fa-home',          label: 'Overview',   href: '/dashboard' },
+  { icon: 'fa-home',          label: 'Overview',    href: '/dashboard' },
   { icon: 'fa-shopping-cart', label: 'New Order',   href: '/user/new-order' },
+  { icon: 'fa-layer-group',   label: 'Mass Order',  href: '/user/mass-order' },
   { icon: 'fa-list',          label: 'All Orders',  href: '/user/all-order' },
-  { icon: 'fa-th-large',      label: 'Services',    href: '/user/services' },
-  { icon: 'fa-wallet',        label: 'Add Funds',   href: '/user/add-funds' },
   { icon: 'fa-redo',          label: 'Refill',      href: '/user/refill-order' },
   { icon: 'fa-tint',          label: 'Drip Feed',   href: '/user/drip-feed' },
+  { icon: 'fa-th-large',      label: 'Services',    href: '/user/services' },
+  { icon: 'fa-wallet',        label: 'Add Funds',   href: '/user/add-funds' },
   { icon: 'fa-headset',       label: 'Support',     href: 'https://wa.me/2348131654957' },
   { icon: 'fa-code',          label: 'API',         href: '/user/api' },
 ];
 
 const PAGE_TITLES: Record<string, string> = {
-  '/user/services':    'Services',
-  '/user/new-order':   'New Order',
-  '/user/all-order':   'All Orders',
-  '/user/add-funds':   'Add Funds',
-  '/user/refill-order':'Refill Order',
-  '/user/drip-feed':   'Drip Feed',
-  '/user/api':         'API Documentation',
+  '/user/new-order':    'New Order',
+  '/user/mass-order':   'Mass Order',
+  '/user/all-order':    'All Orders',
+  '/user/refill-order': 'Refill Order',
+  '/user/drip-feed':    'Drip Feed',
+  '/user/services':     'Services',
+  '/user/add-funds':    'Add Funds',
+  '/user/api':          'API Documentation',
 };
 
 export default function UserLayout({ children }: { children: React.ReactNode }) {
